@@ -1,25 +1,73 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Hyperspace - iPhone" translatesAutoresizingMaskIntoConstraints="NO" id="UDp-wi-nUl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-Cf-JYl">
+                                <rect key="frame" x="0.0" y="236" width="375" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYs-HZ-qG0">
+                                <rect key="frame" x="31" y="460" width="312" height="71"/>
+                                <color key="backgroundColor" red="0.2028830616" green="0.59079071969999997" blue="0.11908455649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BINGO" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RqF-hi-2iz">
+                                <rect key="frame" x="22" y="555" width="330" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="B37-xo-0Gh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="V9l-Cf-JYl" firstAttribute="leading" secondItem="UDp-wi-nUl" secondAttribute="leading" id="3MD-A5-5o7"/>
+                            <constraint firstItem="UDp-wi-nUl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AyV-Ig-6Ro"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UDp-wi-nUl" secondAttribute="bottom" id="DG1-JN-0XZ"/>
+                            <constraint firstItem="gYs-HZ-qG0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="DMl-DQ-DqT"/>
+                            <constraint firstItem="gYs-HZ-qG0" firstAttribute="top" secondItem="V9l-Cf-JYl" secondAttribute="bottom" constant="8" symbolic="YES" id="E1j-sG-pZC"/>
+                            <constraint firstItem="RqF-hi-2iz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="6" id="Q2E-xs-vgH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RqF-hi-2iz" secondAttribute="bottom" constant="49" id="aL6-2h-5A3"/>
+                            <constraint firstAttribute="trailing" secondItem="UDp-wi-nUl" secondAttribute="trailing" id="iKd-uP-HZT"/>
+                            <constraint firstItem="RqF-hi-2iz" firstAttribute="centerX" secondItem="gYs-HZ-qG0" secondAttribute="centerX" id="ku9-hd-MaZ"/>
+                            <constraint firstItem="RqF-hi-2iz" firstAttribute="top" secondItem="gYs-HZ-qG0" secondAttribute="bottom" constant="24" id="p5N-nt-aey"/>
+                            <constraint firstItem="UDp-wi-nUl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qdt-hu-XYS"/>
+                            <constraint firstItem="V9l-Cf-JYl" firstAttribute="centerX" secondItem="gYs-HZ-qG0" secondAttribute="centerX" id="tv8-gU-9Ss"/>
+                            <constraint firstItem="V9l-Cf-JYl" firstAttribute="trailing" secondItem="UDp-wi-nUl" secondAttribute="trailing" id="uRT-66-NDg"/>
+                            <constraint firstItem="V9l-Cf-JYl" firstAttribute="centerY" secondItem="UDp-wi-nUl" secondAttribute="centerY" id="z1F-IY-u7L"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="599.5" y="479.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Hyperspace - iPhone" width="1242" height="2208"/>
+    </resources>
 </document>
