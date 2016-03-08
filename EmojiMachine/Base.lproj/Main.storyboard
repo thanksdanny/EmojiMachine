@@ -24,8 +24,8 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9l-Cf-JYl">
                                 <rect key="frame" x="0.0" y="236" width="375" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYs-HZ-qG0">
-                                <rect key="frame" x="31" y="460" width="312" height="71"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYs-HZ-qG0">
+                                <rect key="frame" x="31" y="460" width="312" height="45"/>
                                 <color key="backgroundColor" red="0.2028830616" green="0.59079071969999997" blue="0.11908455649999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
                                 <state key="normal" title="Go">

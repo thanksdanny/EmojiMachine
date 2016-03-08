@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIPickerView *emojiPickerView;
 @property (weak, nonatomic) IBOutlet UIButton *goBtn;
 @property (weak, nonatomic) IBOutlet UILabel *bingoLabel;
+@property (nonatomic) CGRect bounds;
 
 @property (nonatomic, strong) NSArray *imageArray;
 @property (nonatomic, strong) NSMutableArray *dataArray1;
@@ -31,6 +32,7 @@
 
     self.emojiPickerView.delegate = self;
     self.emojiPickerView.dataSource = self;
+    self.bounds = CGRectZero;
     
     self.dataArray1 = [[NSMutableArray alloc] init];
     self.dataArray2 = [[NSMutableArray alloc] init];
@@ -57,10 +59,27 @@
 #pragma mark - goAction
 
 - (IBAction)goBtnDidTouch {
+    [self.emojiPickerView selectRow:arc4random() % 90 + 3 inComponent:0 animated:YES];
+    [self.emojiPickerView selectRow:arc4random() % 90 + 3 inComponent:1 animated:YES];
+    [self.emojiPickerView selectRow:arc4random() % 90 + 3 inComponent:2 animated:YES];
     
+    NSLog(@"%@", self.dataArray1[[self.emojiPickerView selectedRowInComponent:0]]);
+    if (self.dataArray1[[self.emojiPickerView selectedRowInComponent:0]] == self.dataArray2[[self.emojiPickerView selectedRowInComponent:1]] &&
+        self.dataArray2[[self.emojiPickerView selectedRowInComponent:1]] == self.dataArray3[[self.emojiPickerView selectedRowInComponent:2]]) {
+        self.bingoLabel.text = @"Bingo!";
+    } else {
+        self.bingoLabel.text = @"💔";
+    }
+    
+    // animate
+//    [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.1 initialSpringVelocity:5 options:UIViewAnimationOptionCurveLinear animations:^{
+//        self.goBtn.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width + 20, self.bounds.size.height);
+//    } completion:^(BOOL finished) {
+//        [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+//            self.goBtn.bounds = CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, self.bounds.size.height);
+//        } completion:nil];
+//    }];
 }
-
-
 
 #pragma mark - pickerDelegate & dataSource
 
